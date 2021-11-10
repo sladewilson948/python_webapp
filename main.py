@@ -4,6 +4,7 @@ from pywebio.output import *
 
 def main():
      list1=[]
+     list2=[]
      def absolute_sum(i):
          value=str(i)
          while len(value)!=1:
@@ -38,7 +39,8 @@ def main():
      k=validate_card(card_number)
      list1.append(card_number)
      list1.append(k)
-     put_table(list1,headers=['Card Number','Validity'])
+     list2.append(list1)
+     put_table(list2,headers=['Card Number','Validity'])
 
 if __name__ == '__main__':
     import argparse
