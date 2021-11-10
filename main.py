@@ -35,7 +35,7 @@ def main():
              pass
      card_number=input("Enter card number here : ",type=TEXT,validate=check_number)
      k=validate_card(card_number)
-     put_table([[card_number,k]],headers=['Card Number','Validity'])
+     put_table([[card_number,k]],header=['Card Number','Validity'])
 
 if __name__ == '__main__':
     import argparse
