@@ -3,6 +3,7 @@ from pywebio.input import *
 from pywebio.output import *
 
 def main():
+     list1=[]
      def absolute_sum(i):
          value=str(i)
          while len(value)!=1:
@@ -35,7 +36,9 @@ def main():
              pass
      card_number=input("Enter card number here : ",type=TEXT,validate=check_number)
      k=validate_card(card_number)
-     toast(f'It is a {k}')
+     list1.append(card_number)
+     list1.append(k)
+     put_table(list1,headers=['Card Number','Validity'])
 
 if __name__ == '__main__':
     import argparse
